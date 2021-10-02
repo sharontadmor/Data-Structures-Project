@@ -29,9 +29,31 @@ The measurements started from the biggest tree to the smallest. In addition, cal
 
 ### Results
 Table 1 – average time for function call in nano seconds:
+
 ![image](https://user-images.githubusercontent.com/73187826/135727779-b33375d7-2780-42fe-bb98-9f16839045c0.png)
 
+Graph 1 – average time in nano seconds dependent on the number of calls for prefixXor:
+
+![image](https://user-images.githubusercontent.com/73187826/135727806-740fa166-e622-4923-957d-2bc41e167f38.png)
+
+Graph 2 – average time in nano seconds dependent on the number of calls for succPrefixXor:
+
+![image](https://user-images.githubusercontent.com/73187826/135727815-d8a0444a-35f3-43f7-801b-3b1dcbc7e890.png)
+
 ### Discussion
+We measured the time for a single call (efficient and inefficient) for each node. The average was taken over all the nodes, i.e., the average operation time as the tree grow.
+
+From the theoretical analysis of time complexity, we expect lower times for smaller inputs. In addition, we expect a logarithmic trend for the efficient method, and a linear trend for the inefficient one. For the first 100 nodes we might expect lower times and more similar trends between the two methods.
+
+As expected, the larger the input (more nodes), the higher the average time. This is because more actions are performed and overall, they take more time.
+
+In the efficient method, the most time-consuming operations are searching for the node with key k and climbing back up to the root. These operations depend on the height of the tree, which is O(log⁡ n) in an AVL tree. We want the average over all the keys because the closer a node is to the root, the faster the operation on it.
+
+In the inefficient method, the most time-consuming operation is searching the successors for each key until k. This operation depends on the number of nodes in the tree.
+
+As for the first 100 keys, In the efficient method the differences in times between the first 100 keys and all the keys are insignificant. This is because a logarithmic trend grows slowly, and the time complexity is more uniform for different size inputs. In the inefficient method, the differences are significant – the average time for all the keys is significantly higher than that of just the first 100 keys.
+
+Furthermore, times are similar for the first 100 keys between the efficient and inefficient methods. Time is linear in the rank of a key, therefore the time is roughly constant for a constant rank of one hundred.
 
 ## Measurements II
 ### Introduction
