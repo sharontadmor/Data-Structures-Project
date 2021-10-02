@@ -35,6 +35,7 @@ Table 1 – average time for function call in nano seconds:
 | | first 100 calls | all calls | first 100 calls | all calls |
 |1|641|3279|273|284|
 
+![image](https://user-images.githubusercontent.com/73187826/135727779-b33375d7-2780-42fe-bb98-9f16839045c0.png)
 
 ### Discussion
 
