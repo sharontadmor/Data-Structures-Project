@@ -15,3 +15,28 @@ The class has methods which keep the tree balanced upon insertion and deletion o
 
 min() and max()’s low time complexity of O(1) is achieved by maintaining instance fields: min and max, upon insertion and deletion.
 
+## Measurements I
+### Introduction
+The first set of measurements compares between the methods prefixXor(int k) and succPrefixXor(int k). The latter takes O(n) time complexity, and is an inefficient version of the former, which takes O(log⁡ n) time.
+
+For i = 1,…,5 the following process was repeated:
+
+1. Insert n = 500 * i different integers at random.
+2. Iterate the keys in sorted order and call prefixXor(int k) for each key.
+3. Repeat step 2 with succPrefixXor(int k).
+
+The measurements started from the biggest tree to the smallest. In addition, calibration was made by running an extra measurement first.
+
+### Results
+Table 1 – average time for function call in nano seconds:
+![image](https://user-images.githubusercontent.com/73187826/135727628-2da449a7-8ccd-49dd-b4bd-a0163d0404ab.png)
+
+
+### Discussion
+
+## Measurements II
+### Introduction
+
+### Results
+
+### Discussion
