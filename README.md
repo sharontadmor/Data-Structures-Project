@@ -29,7 +29,11 @@ The measurements started from the biggest tree to the smallest. In addition, cal
 
 ### Results
 Table 1 – average time for function call in nano seconds:
-![image](https://user-images.githubusercontent.com/73187826/135727628-2da449a7-8ccd-49dd-b4bd-a0163d0404ab.png)
+
+| | succPrefixXor | prefixXor |
+|---|---|---|
+| | first 100 calls | all calls | first 100 calls | all calls |
+|1|641|3279|273|284|
 
 
 ### Discussion
